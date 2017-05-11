@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func customizeAppearance(){
+        // Style the status bar and the search bar
+        let barTintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
+        UISearchBar.appearance().barTintColor = barTintColor
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        if statusBar.responds(to:#selector(setter: UIView.backgroundColor)) {
+            statusBar.backgroundColor = barTintColor
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        customizeAppearance()
         return true
     }
 

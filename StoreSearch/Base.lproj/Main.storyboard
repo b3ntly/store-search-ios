@@ -36,12 +36,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0KI-rY-chc"/>
                                 </connections>
                             </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoF-dX-Jej">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="v1W-Qj-PoX">
+                                        <nil key="title"/>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="a6i-vK-uha">
+                                            <rect key="frame" x="10" y="7" width="300" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="All"/>
+                                                <segment title="Music"/>
+                                                <segment title="Software"/>
+                                                <segment title="E-Books"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BCB-UL-H1W"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XoF-dX-Jej" secondAttribute="trailing" id="0a9-Or-wvI"/>
                             <constraint firstItem="Yps-a1-g3V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="28Y-7O-BQ2"/>
                             <constraint firstAttribute="trailing" secondItem="55m-HB-t9H" secondAttribute="trailing" id="E18-yX-Wxk"/>
                             <constraint firstItem="55m-HB-t9H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GFY-Vn-imm"/>
+                            <constraint firstItem="XoF-dX-Jej" firstAttribute="top" secondItem="55m-HB-t9H" secondAttribute="bottom" id="Gdx-Ho-oR2"/>
+                            <constraint firstItem="XoF-dX-Jej" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="J0A-7E-pBL"/>
                             <constraint firstItem="Yps-a1-g3V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JQz-zj-45C"/>
                             <constraint firstAttribute="trailing" secondItem="Yps-a1-g3V" secondAttribute="trailing" id="ZvS-OK-mwp"/>
                             <constraint firstItem="55m-HB-t9H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bii-X3-LfM"/>
@@ -50,12 +74,13 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="55m-HB-t9H" id="sd1-tO-q80"/>
+                        <outlet property="segmentedControl" destination="a6i-vK-uha" id="ysp-42-zXK"/>
                         <outlet property="tableView" destination="Yps-a1-g3V" id="FVv-D4-xoN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="35"/>
+            <point key="canvasLocation" x="-630" y="-17"/>
         </scene>
     </scenes>
 </document>
