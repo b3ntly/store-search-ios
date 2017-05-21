@@ -1,3 +1,3 @@
 ![screenshot](./images/rsz_list.png)
 
-![screenshot](./images/detail.png)
+![screenshot](./images/rsz_detail.png)
